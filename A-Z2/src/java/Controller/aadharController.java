@@ -6,7 +6,9 @@
 package Controller;
 
 import Model.aadharCard;
+import Model.addGrantRenewal;
 import Model.lic;
+import Model.otherwork;
 import Model.salaryIt;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
@@ -20,6 +22,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import services.aadharCardServices;
 import services.licServices;
 import services.salaryItServices;
+import services.otherworkServices;
+import services.addGrantRenewalServices;
 /**
  *
  * @author ravi
@@ -29,7 +33,16 @@ public class aadharController extends AbstractController {
     private aadharCardServices adCServices; 
     private licServices lServices;
     private salaryItServices salItServices;
-
+    private otherworkServices othServices;
+    private addGrantRenewalServices grServices;
+    public void setOthServices(otherworkServices othServices) {
+        this.othServices = othServices;
+    }
+    
+    public void setGrServices(addGrantRenewalServices grServices) {
+        this.grServices = grServices;
+    }
+    
     public void setSalItServices(salaryItServices salItServices) {
         this.salItServices = salItServices;
     }
@@ -52,11 +65,7 @@ public class aadharController extends AbstractController {
     }
     
  
-   
-    
     ModelAndView mv = new ModelAndView();
-    
-
     @RequestMapping(method = RequestMethod.POST)
     protected ModelAndView handleRequestInternal(HttpServletRequest request, HttpServletResponse response) throws Exception {
         //To change body of generated methods, choose Tools | Templates.
@@ -65,6 +74,144 @@ public class aadharController extends AbstractController {
         HttpSession session = request.getSession(true);
         sessionId = session.getId();
         action = ServletRequestUtils.getStringParameter(request, "actionFrom");
+        System.out.println("At Controller -----------------------------");
+        
+        if (action.equals("addotherwork1")) {
+            String formtype = ServletRequestUtils.getStringParameter(request,"formtype");
+            String workname = ServletRequestUtils.getStringParameter(request,"workname");
+            String workname1 = ServletRequestUtils.getStringParameter(request,"workname1");
+            String fullname = ServletRequestUtils.getStringParameter(request,"fullname");
+            String dateofbirth = ServletRequestUtils.getStringParameter(request,"dateofbirth");
+            String addfull = ServletRequestUtils.getStringParameter(request,"addfull");
+            String notesofremark = ServletRequestUtils.getStringParameter(request,"notesofremark");
+            String decidedamt = ServletRequestUtils.getStringParameter(request,"decidedamt");
+            String advamt = ServletRequestUtils.getStringParameter(request,"advamt");
+            String balamt = ServletRequestUtils.getStringParameter(request,"balamt");
+            String refrencename = ServletRequestUtils.getStringParameter(request,"refrencename");
+            String pncd = ServletRequestUtils.getStringParameter(request,"pncd");
+            String ptvd = ServletRequestUtils.getStringParameter(request,"ptvd");
+            String dlvd = ServletRequestUtils.getStringParameter(request,"dlvd");
+            String vgid = ServletRequestUtils.getStringParameter(request,"vgid");
+            String adhcrd = ServletRequestUtils.getStringParameter(request,"adhcrd");
+            String rncd = ServletRequestUtils.getStringParameter(request,"rncd");
+            String ll = ServletRequestUtils.getStringParameter(request,"ll");
+            String aacd = ServletRequestUtils.getStringParameter(request,"aacd");
+            String votid = ServletRequestUtils.getStringParameter(request,"votid");
+            String srl = ServletRequestUtils.getStringParameter(request,"srl");
+            String gbpps = ServletRequestUtils.getStringParameter(request,"gbppa");
+            String lpgpa = ServletRequestUtils.getStringParameter(request,"lpgpa");
+            String iran = ServletRequestUtils.getStringParameter(request,"iran");
+            
+                otherwork ow=new otherwork();
+            
+                ow.setFormtype(formtype);
+                ow.setWorkname(workname);
+                ow.setWorkname1(workname1);
+                ow.setFullname(fullname);
+                ow.setDateofbirth(dateofbirth);
+                ow.setAddfull(addfull);
+                ow.setNotesofremark(notesofremark);
+                ow.setDecidedamt(decidedamt);
+                ow.setAdvamt(advamt);
+                ow.setBalamt(balamt);
+                ow.setRefrencename(refrencename);
+                ow.setPncd(pncd);
+                ow.setPtvd(ptvd);
+                ow.setDlvd(dlvd);
+                ow.setVgid(vgid);
+                ow.setAdhcrd(adhcrd);
+                ow.setRncd(rncd);
+                ow.setLl(ll);
+                ow.setAacd(aacd);
+                ow.setVotid(votid);
+                ow.setSrl(srl);
+                ow.setGbpps(gbpps);
+                ow.setLpgpa(lpgpa);
+                ow.setIran(iran);
+            
+            int addotherwork=othServices.addOtherwork(ow);
+                
+                
+            mv.setViewName("index");
+            return mv;
+            
+            
+            }
+
+        
+        
+         if (action.equals("addgetGrantRenewal1")) {
+            String TheLicensingAuthority = ServletRequestUtils.getStringParameter(request, "TheLicensingAuthority");
+            String MotorCyclewithoutgear = ServletRequestUtils.getStringParameter(request, "MotorCyclewithoutgear");
+            String MotorCyclewithgear = ServletRequestUtils.getStringParameter(request, "MotorCyclewithgear");
+            String InvalidCarriages = ServletRequestUtils.getStringParameter(request, "InvalidCarriages");
+            String LightMotorVehicle = ServletRequestUtils.getStringParameter(request, "LightMotorVehicle");
+            String MediumMotorCycle = ServletRequestUtils.getStringParameter(request, "MediumMotorCycle");
+            String HeavygoodsVehicle = ServletRequestUtils.getStringParameter(request, "HeavygoodsVehicle");
+            String RoadRollers = ServletRequestUtils.getStringParameter(request, "HeavyPassengerMotorVehicle");
+            String MotorVehicleoffollowingdescription = ServletRequestUtils.getStringParameter(request, "isMotorVehicleoffollowingdescription");
+            String FullName = ServletRequestUtils.getStringParameter(request, "FullName");
+            String Son = ServletRequestUtils.getStringParameter(request, "Son");
+            String PermanentAddress = ServletRequestUtils.getStringParameter(request, "PermanentAddress");
+            String TemporaryAddress = ServletRequestUtils.getStringParameter(request, "TemporaryAddress");
+            String datepicker = ServletRequestUtils.getStringParameter(request, "datepicker");
+            String EducationalQualification = ServletRequestUtils.getStringParameter(request, "EducationalQualification");
+            String IdentificationMark = ServletRequestUtils.getStringParameter(request, "IdentificationMark");
+            String BloodGroupwithRHfactor = ServletRequestUtils.getStringParameter(request, "BloodGroupwithRHfactor");
+            String decidedprmamt = ServletRequestUtils.getStringParameter(request, "decidedprmamt");
+            String advpremamt = ServletRequestUtils.getStringParameter(request, "advpremamt");
+            String balaamt = ServletRequestUtils.getStringParameter(request, "balaamt");
+            String refrencename = ServletRequestUtils.getStringParameter(request, "refrencename");
+
+            String Iholdaneffectivedrivinglicencetodrive = ServletRequestUtils.getStringParameter(request, "Iholdaneffectivedrivinglicencetodrive");
+            String Particulars = ServletRequestUtils.getStringParameter(request, "Particulars");
+            String Particularsof = ServletRequestUtils.getStringParameter(request, "Particularsof");
+            String Haveyoubeen = ServletRequestUtils.getStringParameter(request, "Haveyoubeen");
+            String issuedbythe = ServletRequestUtils.getStringParameter(request, "issuedbythe");
+            String IencloseMedical = ServletRequestUtils.getStringParameter(request, "IencloseMedical");
+            String IencloseDriving = ServletRequestUtils.getStringParameter(request, "IencloseDriving");
+            String issuedby = ServletRequestUtils.getStringParameter(request, "issuedby");
+
+            addGrantRenewal gr=new addGrantRenewal();
+            
+            gr.setTheLicensingAuthority(TheLicensingAuthority);
+            gr.setMotorCyclewithoutgear(MotorCyclewithoutgear);
+            gr.setMotorCyclewithgear(MotorCyclewithgear);
+            gr.setInvalidCarriages(InvalidCarriages);
+            gr.setLightMotorVehicle(LightMotorVehicle);
+            gr.setMediumMotorCycle(MediumMotorCycle);
+            gr.setHeavygoodsVehicle(HeavygoodsVehicle);
+            gr.setRoadRollers(RoadRollers);
+            gr.setMotorVehicleoffollowingdescription(MotorVehicleoffollowingdescription);
+            gr.setFullName(FullName);
+            gr.setSon(Son);
+            gr.setPermanentAddress(PermanentAddress);
+            gr.setTemporaryAddress(TemporaryAddress);
+            gr.setDatepicker(Integer.MAX_VALUE);
+            gr.setEducationalQualification(EducationalQualification);
+            gr.setIdentificationMark(IdentificationMark);
+            gr.setBloodGroupwithRHfactor(BloodGroupwithRHfactor);
+            gr.setDecidedprmamt(decidedprmamt);
+            gr.setAdvpremamt(advpremamt);
+            gr.setBalaamt(balaamt);
+            gr.setRefrencename(refrencename);
+            
+            gr.setIholdaneffectivedrivinglicencetodrive(Iholdaneffectivedrivinglicencetodrive);
+            gr.setParticulars(Particulars);
+            gr.setParticularsof(Particularsof);
+            gr.setHaveyoubeen(Haveyoubeen);
+            gr.setIssuedby(issuedby);
+            gr.setIssuedbythe(issuedbythe);
+            gr.setIencloseDriving(IencloseDriving);
+            gr.setIencloseMedical(IencloseMedical);         
+            
+             int addaddgrantrenewal=grServices.addaddgrantrenewal(gr);
+            
+            mv.setViewName("index");
+            return mv;
+        }
+
+   
 
         if (action.equals("addGumastaDetail")) {
             
@@ -156,9 +303,6 @@ public class aadharController extends AbstractController {
         }
         if (action.equals("addaadharCardDetail")) {
             
-            
-          
-            
             String oldAadharNo = ServletRequestUtils.getRequiredStringParameter(request, "oldAadharNo");
             String selfName = ServletRequestUtils.getStringParameter(request, "selfName");
             String mobNo = ServletRequestUtils.getStringParameter(request, "mobNo");
@@ -237,8 +381,8 @@ public class aadharController extends AbstractController {
             AadharCard.setRentAgreement(rentAgreement);
             
             
-            lic Lic=new lic();
-            salaryIt salIt=new salaryIt();
+//            lic Lic=new lic();
+//            salaryIt salIt=new salaryIt();
            // int addlic=lServices.addLic(Lic);
             
              int aadharList=adCServices.addAadharCard(AadharCard);
@@ -354,6 +498,7 @@ public class aadharController extends AbstractController {
                  int addlic=lServices.addLic(li);
                
                 List liclist=lServices.viewlicDetailsMobileNo(ismn);
+                List liclist1=lServices.viewlicDetailsCustomerName(issnf);
                 
             mv.setViewName("index");
         return mv;

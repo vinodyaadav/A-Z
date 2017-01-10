@@ -17,6 +17,10 @@
     <bean id="aadharDao" class="dao.aadharCardDaoImpl">
             <property name="sessionFactory"> <ref bean="sessionFactory"/> </property>
     </bean>
+    
+    <bean id="otherworkDao" class="dao.otherworkDaoImpl">
+            <property name="sessionFactory"> <ref bean="sessionFactory"/> </property>
+    </bean>
 
          <bean id="salaryItDao" class="dao.salaryItDaoImpl">
             <property name="sessionFactory"> <ref bean="sessionFactory"/> </property>
@@ -24,6 +28,10 @@
          
          
     <bean id="licDao" class="dao.licDaoImpl">
+            <property name="sessionFactory"> <ref bean="sessionFactory"/> </property>
+    </bean>
+    
+        <bean id="addGrantRenewalDao" class="dao.addGrantRenewalDaoImpl">
             <property name="sessionFactory"> <ref bean="sessionFactory"/> </property>
     </bean>
    

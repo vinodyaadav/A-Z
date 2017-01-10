@@ -18,5 +18,5 @@ public interface licServices {
     int addLic(lic Lic);
     int updateLic(lic Lic);
     List viewlicDetailsMobileNo(String mobileNo);
-    
+    List viewlicDetailsCustomerName(String customerName);
 }

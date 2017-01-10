@@ -56,8 +56,16 @@ public  class licDaoImpl extends HibernateDaoSupport implements licDao{
         return licList;
     }
     
-    
- 
-
-    
+    public List viewlicDetailsCustomerName(String customerName) {
+        List licList=new ArrayList();
+        try{
+            //String sql="from Faculty where facultyName like '"+facultyName+"%' order by facultyName";
+           // String sql="from Faculty order by facultyName";
+            //System.out.println("Sql is :"+sql);enrolNo=?"
+           licList=getHibernateTemplate().find("from lic where issnf=?",customerName);
+            //facultyList=getHibernateTemplate().find(" from Faculty order by facultyName");
+        }catch(Exception e){
+        }
+        return licList;
+    }
 }

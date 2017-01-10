@@ -36,5 +36,7 @@ public  class licServicesImpl implements licServices {
         return licDao.viewlicDetailsMobileNo(mobileNo);
     }
 
-  
+   public List viewlicDetailsCustomerName(String customerName){
+        return licDao.viewlicDetailsCustomerName(customerName);
+    }
 }

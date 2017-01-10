@@ -19,7 +19,7 @@ public interface licDao {
    
   List viewlicDetailsMobileNo(String mobileNo);
     
-    
+  List viewlicDetailsCustomerName(String customerName);  
     
   
 }
