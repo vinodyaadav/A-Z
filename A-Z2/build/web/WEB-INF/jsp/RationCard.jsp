@@ -155,7 +155,7 @@
                                     <tr>
                                         <td>Full Address :</td>
 
-                                        <td style="padding-left:5px;width:35%;>
+                                        <td style="padding-left:5px;width:35%;">
 
 
                                             <div class="form-group">

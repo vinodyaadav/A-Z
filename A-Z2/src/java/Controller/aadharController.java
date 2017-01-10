@@ -43,6 +43,10 @@ public class aadharController extends AbstractController {
         this.grServices = grServices;
     }
     
+
+     public salaryItServices getSalItServices() {
+        return salItServices;
+    }
     public void setSalItServices(salaryItServices salItServices) {
         this.salItServices = salItServices;
     }
@@ -504,9 +508,111 @@ public class aadharController extends AbstractController {
         return mv;
             }
 
+    
+
+
+ if (action.equals("addSalaryIt"))
+{
+            
+            String itType = ServletRequestUtils.getStringParameter(request, "itType");
+            String panNo = ServletRequestUtils.getStringParameter(request, "panNo");
+            String fulName = ServletRequestUtils.getStringParameter(request, "fulName");
+            String surName = ServletRequestUtils.getStringParameter(request, "surName");
+            String dateOfBirth = ServletRequestUtils.getStringParameter(request, "dateOfBirth");
+            String prsntFulAdd = ServletRequestUtils.getStringParameter(request, "prsntFulAdd");
+            String itMakeValue = ServletRequestUtils.getStringParameter(request, "itMakeValue");
+            String textPaidArea = ServletRequestUtils.getStringParameter(request, "textPaidArea");
+            String licPremPaid = ServletRequestUtils.getStringParameter(request, "licPremPaid");
+            String medicalPrem = ServletRequestUtils.getStringParameter(request, "medicalPrem");
+            String hraInterest = ServletRequestUtils.getStringParameter(request, "hraInterest");
+            String natureOfBuisness = ServletRequestUtils.getStringParameter(request, "natureOfBuisness");
+            String salaryRsMly = ServletRequestUtils.getStringParameter(request, "salaryRsMly");
+            String companyName = ServletRequestUtils.getStringParameter(request, "companyName");
+            String post = ServletRequestUtils.getStringParameter(request, "post");
+            String bnkAccNo = ServletRequestUtils.getStringParameter(request, "bnkAccNo");
+            String branch = ServletRequestUtils.getStringParameter(request, "branch");
+            String ifscCode = ServletRequestUtils.getStringParameter(request, "ifscCode");
+            String micrCode = ServletRequestUtils.getStringParameter(request, "micrCode");
+            String additionalInfo1 = ServletRequestUtils.getStringParameter(request, "additionalInfo1");
+            String additionalInfo2 = ServletRequestUtils.getStringParameter(request, "additionalInfo2");
+            String decideAmnt = ServletRequestUtils.getStringParameter(request, "decideAmnt");
+            String advAmnt = ServletRequestUtils.getStringParameter(request, "advAmnt");
+            String balAmnt = ServletRequestUtils.getStringParameter(request, "balAmnt");
+            String refAmnt = ServletRequestUtils.getStringParameter(request, "refAmnt");
+            String panCard = ServletRequestUtils.getStringParameter(request, "panCard");
+            String aadharCard = ServletRequestUtils.getStringParameter(request, "aadharCard");
+            String votingCard = ServletRequestUtils.getStringParameter(request, "votingCard");
+            String passportValid = ServletRequestUtils.getStringParameter(request, "passportValid");
+            String drivingLicn = ServletRequestUtils.getStringParameter(request, "drivingLicn");
+            String rationCard = ServletRequestUtils.getStringParameter(request, "rationCard");
+            String lightBill = ServletRequestUtils.getStringParameter(request, "lightBill");
+            String salaryItPaper = ServletRequestUtils.getStringParameter(request, "salaryItPaper");
+            String canclCheq = ServletRequestUtils.getStringParameter(request, "canclCheq");
+            String bankDetails = ServletRequestUtils.getStringParameter(request, "bankDetails");
+            String investmentCopy = ServletRequestUtils.getStringParameter(request, "investmentCopy");
+            String loanEmi = ServletRequestUtils.getStringParameter(request, "loanEmi");
+            String gumasta = ServletRequestUtils.getStringParameter(request, "gumasta");
+            String currentAcc = ServletRequestUtils.getStringParameter(request, "currentAcc");
+            String investment = ServletRequestUtils.getStringParameter(request, "investment");
+            String Loan = ServletRequestUtils.getStringParameter(request, "Loan");
+       
+            salaryIt SalaryIt=new salaryIt();
+
+            
+            SalaryIt.setItType(itType);
+            
+            SalaryIt.setPanNo(panNo);
+            SalaryIt.setFulName(fulName);
+            SalaryIt.setSurName(surName);
+            SalaryIt.setDateOfBirth(dateOfBirth);
+            SalaryIt.setPrsntFulAdd(prsntFulAdd);
+            SalaryIt.setItMakeValue(itMakeValue);
+            SalaryIt.setTextPaidArea(textPaidArea);
+            SalaryIt.setLicPremPaid(licPremPaid);
+            SalaryIt.setMedicalPrem(medicalPrem);
+            SalaryIt.setHraInterest(hraInterest);
+            SalaryIt.setNatureOfBuisness(natureOfBuisness);
+            SalaryIt.setSalaryRsMly(salaryRsMly);
+            SalaryIt.setSalaryItPaper(salaryItPaper);
+            SalaryIt.setCompanyName(companyName);
+            SalaryIt.setPost(post);
+            SalaryIt.setBnkAccNo(bnkAccNo);
+            SalaryIt.setBranch(branch);
+            SalaryIt.setIfscCode(ifscCode);
+            SalaryIt.setMicrCode(micrCode);
+            SalaryIt.setAdditionalInfo1(additionalInfo1);
+            SalaryIt.setAdditionalInfo2(additionalInfo2);
+            SalaryIt.setDecideAmnt(decideAmnt);
+            SalaryIt.setAdvAmnt(advAmnt);
+            SalaryIt.setBalAmnt(balAmnt);
+            SalaryIt.setRefAmnt(refAmnt);
+            SalaryIt.setPanCard(panCard);
+            SalaryIt.setAadharCard(aadharCard);
+            SalaryIt.setVotingCard(votingCard);
+            SalaryIt.setPassportValid(passportValid);
+            SalaryIt.setDrivingLicn(drivingLicn);
+            SalaryIt.setRationCard(rationCard);
+            SalaryIt.setLightBill(lightBill);
+            SalaryIt.setSalaryItPaper(salaryItPaper);
+            SalaryIt.setCanclCheq(canclCheq);
+            SalaryIt.setBankDetails(bankDetails);
+            SalaryIt.setInvestmentCopy(investmentCopy);
+            SalaryIt.setLoanEmi(loanEmi);
+            SalaryIt.setGumasta(gumasta);
+            SalaryIt.setCurrentAcc(currentAcc);
+            SalaryIt.setInvestment(investment);
+            SalaryIt.setLoan(Loan);
+            
+             int SalIt=salItServices.addsalaryIt(SalaryIt);
+         
+             
         mv.setViewName("index");
         return mv;
+        }
+        
 
+        mv.setViewName("index");
+        return mv;
     }
 
 }

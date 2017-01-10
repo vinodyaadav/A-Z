@@ -27,6 +27,6 @@
         </bean>
         
         <bean id="salaryItServices" class="services.salaryItServicesImpl" >
-                <property name="salaryItDao"><ref bean="salaryItDao" /></property>
+                <property name="SalaryItDao"><ref bean="salaryItDao" /></property>
         </bean>
     </beans>

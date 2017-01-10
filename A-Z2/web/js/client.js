@@ -1336,3 +1336,246 @@ function addAdharCard()
     addAdharCardDetails(oldAadharNo, selfName, mobNo, fatherName, husbandName, dob, address, changesNote, changesNote1, changesNote2, decidedAmtRs, advamt, balamt, referanceName, birthCert, boardcert10, boardcert12, graduateCopy, higheredu, schoolcert, pancard, passport, drivingLicence, votingId, RestLetter, govtbankpass, licpolicy, renetedAgree,
             rationcard, Votingid, Passportadd, Drivinglic, PassbookBank, lightbill, bankStat, rentAgreement);
 }
+function addSalaryItDetails()
+
+
+{
+    var itType =document.getElementById("itType").value;
+    var panNo=document.getElementById("panNo").value;
+    var fulName=document.getElementById("fulName").value;
+    var surName=document.getElementById("surName").value;
+    var dateOfBirth=document.getElementById("dateOfBirth").value;
+    var prsntFulAdd=document.getElementById("prsntFulAdd").value;
+    var itMakeValue=document.getElementById("itMakeValue").value;
+    var textPaidArea=document.getElementById("textPaidArea").value;
+    var licPremPaid=document.getElementById("licPremPaid").value;
+    var medicalPrem=document.getElementById("medicalPrem").value;
+    var hraInterest=document.getElementById("hraInterest").value;
+    var natureOfBuisness=document.getElementById("natureOfBuisness").value;
+    var salaryRsMly=document.getElementById("salaryRsMly").value;
+    var companyName=document.getElementById("companyName").value;
+    var post=document.getElementById("post").value;
+    var bnkAccNo=document.getElementById("bnkAccNo").value;
+    var branch=document.getElementById("branch").value;
+    
+    var ifscCode=document.getElementById("ifscCode").value;
+    //alert("16"+ifscCode);
+    
+    var micrCode=document.getElementById("micrCode").value;
+   // alert("17"+micrCode);
+    var additionalInfo1=document.getElementById("additionalInfo1").value;
+    //alert("18"+additionalInfo1);
+    var additionalInfo2=document.getElementById("additionalInfo2").value;
+   // alert("19"+additionalInfo2);
+    var decideAmnt=document.getElementById("decideAmnt").value;
+ //   alert("20"+decideAmnt);
+    var advAmnt=document.getElementById("advAmnt").value;
+   // alert("21"+advAmnt);
+    var balAmnt=document.getElementById("balAmnt").value;
+     //alert("22"+balAmnt);
+    var refAmnt=document.getElementById("refAmnt").value;
+   /*  alert("23"+refAmnt);
+   
+    alert("24"+panCard);
+    alert("25"+aadharCard);
+    alert("26"+votingCard);
+    alert("27"+passportValid);
+    alert("28"+drivingLicn);
+    alert("29"+rationCard);
+    alert("30"+lightBill);
+    alert("31"+salaryItPaper);
+    alert("32"+canclCheq);
+    alert("33"+bankDetails);
+    alert("34"+investmentCopy);
+    alert("35"+loanEmi);
+    alert("36"+gumasta);
+    alert("37"+currentAcc);
+    alert("39"+investment);
+    alert("40"+Loan); */
+    var ispanCard=document.getElementById("panCard").checked;
+     var panCard="";
+    if(ispanCard)
+    {
+        panCard="Yes";
+        
+    }
+    else{
+         panCard="No";
+        
+    }
+    var isaadharCard=document.getElementById("aadharCard").checked;
+     var aadharCard="";
+    if(isaadharCard)
+    {
+        iran="Yes";
+        
+    }
+    else{
+         iran="No";
+        
+    }
+    var isvotingCard=document.getElementById("votingCard").checked;
+     var votingCard="";
+    if(isvotingCard)
+    {
+        votingCard="Yes";
+        
+    }
+    else{
+         votingCard="No";
+        
+    }
+     var ispassportValid=document.getElementById("passportValid").checked;
+      var passportValid="";
+    if(ispassportValid)
+    {
+        passportValid="Yes";
+        
+    }
+    else{
+         passportValid="No";
+        
+    }
+    var isdrivingLicn=document.getElementById("drivingLicn").checked;
+     var drivingLicn="";
+    if(isdrivingLicn)
+    {
+        drivingLicn="Yes";
+        
+    }
+    else{
+         drivingLicn="No";
+        
+    }
+    var isrationCard=document.getElementById("rationCard").checked;
+     var rationCard="";
+    if(isrationCard)
+    {
+        rationCard="Yes";
+        
+    }
+    else{
+         rationCard="No";
+        
+    }
+    var islightBill=document.getElementById("lightBill").checked;
+     var lightBill="";
+    if(islightBill)
+    {
+        lightBill="Yes";
+        
+    }
+    else{
+         lightBill="No";
+        
+    }
+    var issalaryItPaper=document.getElementById("salaryItPaper").checked;
+     var salaryItPaper="";
+    if(issalaryItPaper)
+    {
+        salaryItPaper="Yes";
+        
+    }
+    else{
+         salaryItPaper="No";
+        
+    }
+    var iscanclCheq=document.getElementById("canclCheq").checked;
+     var canclCheq="";
+    if(iscanclCheq)
+    {
+        canclCheq="Yes";
+        
+    }
+    else{
+         canclCheq="No";
+        
+    }
+    var isbankDetails=document.getElementById("bankDetails").checked;
+     var bankDetails="";
+    if(isbankDetails)
+    {
+        bankDetails="Yes";
+        
+    }
+    else{
+         bankDetails="No";
+        
+    }
+     var isinvstmntCopy=document.getElementById("investmentCopy").checked;
+      var investmentCopy="";
+    if(isinvstmntCopy)
+    {
+        investmentCopy="Yes";
+        
+    }
+    else{
+         investmentCopy="No";
+        
+    }
+    var isloanEmi=document.getElementById("loanEmi").checked;
+     var loanEmi="";
+    if(isloanEmi)
+    {
+        loanEmi="Yes";
+        
+    }
+    else{
+         loanEmi="No";
+        
+    }
+    var isgumasta=document.getElementById("gumasta").checked;
+     var gumasta="";
+    if(isgumasta)
+    {
+        gumasta="Yes";
+        
+    }
+    else{
+         gumasta="No";
+        
+    }
+    var iscurrentAcc=document.getElementById("currentAcc").checked;
+     var currentAcc="";
+    if(iscurrentAcc)
+    {
+        currentAcc="Yes";
+        
+    }
+    else{
+         currentAcc="No";
+        
+    }
+    var isinvestment=document.getElementById("investment").checked;
+     var investment="";
+    if(isinvestment)
+    {
+        investment="Yes";
+        
+    }
+    else{
+         investment="No";
+        
+    }
+    var isLoan=document.getElementById("Loan").checked;
+     var Loan="";
+    if(isLoan)
+    {
+        Loan="Yes";
+        
+    }
+    else{
+         Loan="No";
+        
+    }
+  alert("alert coming"+Loan);
+      
+
+    addSalaryIt(itType,panNo,fulName,surName,dateOfBirth,prsntFulAdd,prsntFulAdd,itMakeValue,textPaidArea,licPremPaid,
+              medicalPrem,hraInterest,natureOfBuisness,salaryRsMly,companyName,post,bnkAccNo,branch,ifscCode,micrCode,additionalInfo1,
+              additionalInfo2,decideAmnt,advAmnt,balAmnt,refAmnt,panCard,aadharCard,votingCard,passportValid,drivingLicn,rationCard,
+              lightBill,salaryItPaper,canclCheq,bankDetails,investmentCopy,loanEmi,gumasta,currentAcc,investment,Loan);                              
+ 
+ 
+ 
+ }

@@ -8,6 +8,7 @@ package services;
 
 import Model.salaryIt;
 import dao.salaryItDao;
+import java.util.List;
 
 
 public class salaryItServicesImpl implements salaryItServices {
@@ -31,6 +32,10 @@ public class salaryItServicesImpl implements salaryItServices {
     @Override
     public int updatesalaryIt(salaryIt salaryIt) {
         return SalaryItDao.updatesalaryIt(salaryIt);
+    }
+
+      public List viewsalaryItDetailsFulName(String fulName){
+        return salaryIt.viewsalaryItDetailsFulName(fulName);
     }
 
     /*public List viewsalaryIt(String loggedInUser) {

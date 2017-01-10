@@ -7,6 +7,7 @@
 package services;
 
 import Model.salaryIt;
+import java.util.List;
 
 /**
  *
@@ -16,6 +17,7 @@ public interface salaryItServices {
     
     int addsalaryIt(salaryIt salaryIt);
     int updatesalaryIt(salaryIt salaryIt);
+    List viewsalaryItDetailsFulName(String fulName);
   /* List viewsalaryIt(String loggedInUser);
    List viewAllsalaryIt(String loggedInUser);
    salaryIt viewsalaryItById(int id,String loggedUser);

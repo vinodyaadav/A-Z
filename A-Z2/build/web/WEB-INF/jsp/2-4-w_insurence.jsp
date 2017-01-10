@@ -134,7 +134,7 @@
 					  <tr>
 					  <td>Address :</td>
 					  
-					  <td style="padding-left:15px;width:25%;>
+					  <td style="padding-left:15px;width:25%;">
 					  <div class="form-group">
                           <textarea class="form-control" rows="2" ></textarea>
                             </div></td>					 

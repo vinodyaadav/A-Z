@@ -178,7 +178,7 @@
 					  <tr>
 					  <td>Full Address :</td>
 					  
-					  <td style="padding-left:5px;width:35%;>
+					  <td style="padding-left:5px;width:35%;">
 					  <div class="form-group">
                           <textarea class="form-control" rows="2" id="FullAdress" ></textarea>
                             </div></td>					 

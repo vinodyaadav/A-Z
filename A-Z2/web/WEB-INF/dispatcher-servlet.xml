@@ -25,7 +25,7 @@
     <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
         <property name="mappings">
             <props>
-                <prop key="grantrenewal.htm">aadharController</prop>
+                <prop key="aadharCard.htm">aadharController</prop>
                  <prop key="login.htm">authenticateController</prop>
             </props>
         </property>
@@ -41,6 +41,6 @@
     -->
     <bean name="authenticateController"
           class="org.springframework.web.servlet.mvc.ParameterizableViewController"
-          p:viewName="grantrenewal" />
+          p:viewName="salary_It" />
 
 </beans>

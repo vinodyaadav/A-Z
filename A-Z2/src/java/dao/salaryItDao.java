@@ -14,8 +14,8 @@ import Model.salaryIt;
  */
 public interface salaryItDao {
     
-     int addsalaryIt(salaryIt AadharCard);
-    int updatesalaryIt(salaryIt AadharCard);
+     int addsalaryIt(salaryIt SalaryIt);
+    int updatesalaryIt(salaryIt SalaryIt);
   /* List viewAadharCard(String loggedInUser);
    List viewAllAadharCard(String loggedInUser);
    salaryIt viewAadharCardById(int id,String loggedUser);

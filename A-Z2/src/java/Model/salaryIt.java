@@ -6,8 +6,12 @@
 package Model;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
+import org.hibernate.annotations.GenericGenerator;
 
 
 /**
@@ -15,67 +19,71 @@ import javax.persistence.Id;
  * @author RAKHI
  */
 @Entity
+@Table(name="salaryit")
 public class salaryIt implements Serializable 
 {
-    
 
-    @Id
+    public static List viewsalaryItDetailsMobileNo(String mobileNo) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public static List viewsalaryItDetailsFulName(String fulName) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
     private int id;
     private String itType;
-    private String panNo = "";
-    private String fulName = "";
-    private String surName = "";
+    private String panNo ;
+    private String fulName ;
+    private String surName ;
     private String dateOfBirth;
-    private String prsntFulAdd = "";
-    private String itMakeValue = "";
+    private String prsntFulAdd ;
+    private String itMakeValue ;
     private String textPaidArea;
     private String licPremPaid;
     private String medicalPrem;
     private String hraInterest;
-    private String natureOfBuisness = "";
+    private String natureOfBuisness ;
     private String salaryRsMly;
-    private String companyName = "";
-    private String post = "";
+    private String companyName ;
+    private String post ;
     private String bnkAccNo;
+    private String branch;
     private String ifscCode;
-    private String micrCode = "";
-    private String additionalInfo1 = "";
-    private String additionalInfo2 = "";
+    private String micrCode ;
+    private String additionalInfo1 ;
+    private String additionalInfo2 ;
     private String decideAmnt;
     private String advAmnt;
     private String balAmnt;
     private String refAmnt;
-    private String panCard = "";
-    private String aadharCard = "";
-    private String votingCard = "";
-    private String passportValid = "";
-    private String drivingLicn = "";
-    private String rationCard = "";
-    private String lightBill = "";
-    private String salaryItPaper = "";
-    private String canclCheq = "";
-    private String bankDetails = "";
-    private String investmentCopy = "";
-    private String loanEmi = "";
-    private String gumasta = "";
-    private String currentAcc = "";
-    private String investment = "";
-    private String Loan = "";
+    private String panCard ;
+    private String aadharCard ;
+    private String votingCard ;
+    private String passportValid ;
+    private String drivingLicn ;
+    private String rationCard ;
+    private String lightBill ;
+    private String salaryItPaper ;
+    private String canclCheq ;
+    private String bankDetails ;
+    private String investmentCopy ;
+    private String loanEmi ;
+    private String gumasta ;
+    private String currentAcc ;
+    private String investment ;
+    private String Loan ;
 
-    /**
-     * @return the id
-     */
-    public int getId() {
+    @Id
+    @GenericGenerator(name = "generator", strategy="increment")
+    @GeneratedValue(generator = "generator")
+   public int getId() {
         return id;
     }
 
-    /**
-     * @param id the id to set
-     */
     public void setId(int id) {
         this.id = id;
     }
-
     /**
      * @return the itType
      */
@@ -634,6 +642,20 @@ public class salaryIt implements Serializable
      */
     public void setLoan(String Loan) {
         this.Loan = Loan;
+    }
+
+    /**
+     * @return the branch
+     */
+    public String getBranch() {
+        return branch;
+    }
+
+    /**
+     * @param branch the branch to set
+     */
+    public void setBranch(String branch) {
+        this.branch = branch;
     }
 
 
