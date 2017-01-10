@@ -6,13 +6,14 @@
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/a-z</property>
     <property name="hibernate.connection.username">root</property>
-    <property name="hibernate.connection.password">password</property>
+    <property name="hibernate.connection.password">root</property>
       <property name="hibernate.show_sql">true</property>
         <mapping  class="Model.aadharCard"/>
         <mapping  class="Model.gumasta"/>
         <mapping  class="Model.mediclaim"/>
          <mapping  class="Model.lic"/>
          <mapping class="Model.addGrantRenewal"/>
+         <mapping  class="Model.otherwork"/>
           <mapping class="Model.salaryIt"/>
         
         

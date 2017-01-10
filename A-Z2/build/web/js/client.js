@@ -5,6 +5,174 @@
  */
 
 
+
+function addotherworkdetails() {
+
+    var formtype = document.getElementById("frmcnt").value;
+    var workname = document.getElementById("wkne").value;
+    var workname1 = document.getElementById("wkne2").value;
+    var fullname = document.getElementById("flne").value;
+    var dateofbirth = document.getElementById("dob").value;
+    var addfull = document.getElementById("adfl").value;
+    var notesofremark = document.getElementById("n1").value;
+    var decidedamt = document.getElementById("ddat").value;
+    var advamt = document.getElementById("avat").value;
+    var balamt = document.getElementById("blat").value;
+    var refrencename = document.getElementById("rene").value;
+    
+    var ispncd = document.getElementById("pncd").checked;
+    var pncd = "";
+    if (ispncd)
+    {
+        pncd = "Yes";
+
+    } else
+    {
+        pncd = "No";
+
+    }
+
+
+    var isptvd = document.getElementById("ptvd").checked;
+    var ptvd = "";
+    if (isptvd)
+    {
+        ptvd = "Yes";
+
+    } else {
+        ptvd = "No";
+
+    }
+
+    var drivlicvalid = document.getElementById("dlvd").checked;
+    var dlvd = "";
+    if (drivlicvalid)
+    {
+        dlvd = "Yes";
+
+    } else {
+        dlvd = "No";
+ 
+    }
+    var votingid = document.getElementById("vgid").checked;
+    var vgid = "";
+    if (votingid)
+    {
+        vgid = "Yes";
+
+    } else {
+        vgid = "No";
+
+    }
+    var adhcrd = document.getElementById("arcd").checked;
+    var vgid = "";
+    if (adhcrd)
+    {
+        vgid = "Yes";
+
+    } else {
+        vgid = "No";
+
+    }
+    var rationcard = document.getElementById("rncd").checked;
+
+    var rncd = "";
+    if (rationcard)
+    {
+        rncd = "Yes";
+
+    } else {
+        rncd = "No";
+
+    }
+    var lightbill = document.getElementById("ll").checked;
+
+    var ll = "";
+    if (lightbill)
+    {
+        ll = "Yes";
+
+    } else {
+        ll = "No";
+
+    }
+
+    var adharcard = document.getElementById("aacd").checked;
+    var aacd = "";
+    if (adharcard)
+    {
+        aacd = "Yes";
+
+    } else {
+        aacd = "No";
+
+    }
+
+    var votinid = document.getElementById("votid").checked;
+    var votid = "";
+    if (votinid)
+    {
+        votid = "Yes";
+
+    } else
+    {
+        votid = "No";
+
+    }
+    var societyresiletter = document.getElementById("srl").checked;
+    var srl = "";
+    if (societyresiletter)
+    {
+        srl = "Yes";
+
+    } else
+    {
+        srl = "No";
+
+    }
+
+
+    var govtbank = document.getElementById("gbpps").checked;
+    var gbpps = "";
+    if (govtbank)
+    {
+        gbpps = "yes";
+
+    } else
+    {
+        gbpps = "no";
+
+    }
+
+
+    var licpolicy = document.getElementById("lpgpa").checked;
+    var lpgpa = "";
+    if (licpolicy)
+    {
+        lpgpa = "yes";
+
+    } else
+    {
+        lpgpa = "no";
+
+    }
+    var ifregerated = document.getElementById("iran").checked;
+    var iran = "";
+    if (ifregerated)
+    {
+        iran = "yes";
+
+    } else
+    {
+        iran = "no";
+
+    }
+
+    addotherwork(formtype, workname, workname1, fullname, dateofbirth, addfull, notesofremark, decidedamt, advamt, balamt,
+            refrencename, pncd, ptvd, dlvd, vgid, adhcrd, rncd,ll, aacd, votid, srl, gbpps, lpgpa, iran);
+}
+
+
 function addPassPortDetails() {
 
     var firstName = document.getElementById("firstName").value;
@@ -230,7 +398,134 @@ function addPassPortDetails() {
     addPassPort(firstName, middleName, lastName, address, emailId, contactNo, dob, male, female, birthCert, schoolCert, sscCert, hscCert, ahCert, panCert, vCert, dlCert, coCert, rCert, lCert, soCert, gCert, aCert, voCert, clCert, bCert, pCert);
 }
 
+    
+    function addGrantRenewal() {
 
+    var TheLicensingAuthority = document.getElementById("TheLicensingAuthority").value;
+    var isMotorCyclewithoutgear = document.getElementById("MotorCyclewithoutgear").checked;
+    var MotorCyclewithoutgear = "";
+    if (isMotorCyclewithoutgear)
+    {
+        MotorCyclewithoutgear = "Yes";
+
+    } else
+    {
+        MotorCyclewithoutgear = "No";
+
+    }
+    var isMotorCyclewithgear = document.getElementById("MotorCyclewithgear").checked;
+    var MotorCyclewithgear = "";
+    if (isMotorCyclewithgear)
+    {
+        MotorCyclewithgear = "Yes";
+
+    } else {
+        MotorCyclewithgear = "No";
+
+    }
+    var isInvalidCarriages = document.getElementById("InvalidCarriages").checked;
+    var InvalidCarriages = "";
+    if (isInvalidCarriages)
+    {
+        InvalidCarriages = "Yes";
+
+    } else {
+        InvalidCarriages = "No";
+
+    }
+    var isLightMotorVehicle = document.getElementById("LightMotorVehicle").checked;
+    var LightMotorVehicle = "";
+    if (isLightMotorVehicle)
+    {
+        LightMotorVehicle = "Yes";
+
+    } else {
+        LightMotorVehicle = "No";
+
+    }
+    var isMediumMotorCycle = document.getElementById("MediumMotorCycle").checked;
+    var MediumMotorCycle = "";
+    if (isMediumMotorCycle)
+    {
+        MediumMotorCycle = "Yes";
+
+    } else {
+        MediumMotorCycle = "No";
+
+    }
+    var isHeavygoodsVehicle = document.getElementById("HeavygoodsVehicle").checked;
+    var HeavygoodsVehicle = "";
+    if (isHeavygoodsVehicle)
+    {
+        HeavygoodsVehicle = "Yes";
+
+    } else {
+        HeavygoodsVehicle = "No";
+
+    }
+    var isHeavyPassengerMotorVehicle = document.getElementById("HeavyPassengerMotorVehicle").checked;
+    var HeavyPassengerMotorVehicle = "";
+    if (isHeavyPassengerMotorVehicle)
+    {
+        HeavyPassengerMotorVehicle = "Yes";
+
+    } else {
+        HeavyPassengerMotorVehicle = "No";
+
+    }
+
+    var isRoadRollers = document.getElementById("RoadRollers").checked;
+    var RoadRollers = "";
+    if (isRoadRollers)
+    {
+        RoadRollers = "Yes";
+
+    } else {
+        RoadRollers = "No";
+
+    }
+    var isMotorVehicleoffollowingdescription = document.getElementById("MotorVehicleoffollowingdescription").checked;
+    var MotorVehicleoffollowingdescription = "";
+    if (isMotorVehicleoffollowingdescription)
+    {
+        MotorVehicleoffollowingdescription = "Yes";
+
+    } else {
+        MotorVehicleoffollowingdescription = "No";
+
+    }
+    var FullName = document.getElementById("FullName").value;
+    var Son = document.getElementById("Son").value;
+    var PermanentAddress = document.getElementById("PermanentAddress").value;
+    var TemporaryAddress = document.getElementById("TemporaryAddress").value;
+    var datepicker = document.getElementById("datepicker").value;
+
+    var EducationalQualification = document.getElementById("EducationalQualification").value;
+    var IdentificationMark = document.getElementById("IdentificationMark").value;
+    var BloodGroupwithRHfactor = document.getElementById("BloodGroupwithRHfactor").value;
+    
+    var decidedprmamt = document.getElementById("decidedprmamt").value;
+    var advpremamt = document.getElementById("advpremamt").value;
+    var balaamt = document.getElementById("balaamt").value;
+    var refrencename = document.getElementById("refrencename").value;
+    
+    var Iholdaneffectivedrivinglicencetodrive = document.getElementById("Iholdaneffectivedrivinglicencetodrive").value;
+    var Particulars = document.getElementById("Particulars").value;
+
+    var Particularsof = document.getElementById("Particularsof").value;
+    var Haveyoubeen = document.getElementById("Haveyoubeen").value;
+    var IencloseMedical = document.getElementById("IencloseMedical").value;
+    var issuedbythe = document.getElementById("issuedbythe").value;
+    var IencloseDriving = document.getElementById("IencloseDriving").value;
+    var issuedby = document.getElementById("issuedby").value;
+    addgetGrantRenewal(TheLicensingAuthority, MotorCyclewithoutgear, MotorCyclewithgear, InvalidCarriages, LightMotorVehicle,
+            MediumMotorCycle, HeavygoodsVehicle, HeavyPassengerMotorVehicle, RoadRollers, MotorVehicleoffollowingdescription,
+            FullName, Son, PermanentAddress, TemporaryAddress, datepicker, EducationalQualification, IdentificationMark, BloodGroupwithRHfactor,
+            decidedprmamt,advpremamt,balaamt,refrencename,Iholdaneffectivedrivinglicencetodrive, Particulars, Particularsof, Haveyoubeen, IencloseMedical, issuedbythe, IencloseDriving, issuedby);
+
+
+}
+    
 function addlicdetails() {
 
     var issnf = document.getElementById("snf").value;

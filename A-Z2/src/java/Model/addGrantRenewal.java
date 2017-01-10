@@ -5,6 +5,7 @@
  */
 package Model;
 
+import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -14,7 +15,7 @@ import javax.persistence.Id;
  * @author Mservices Demo
  */
 @Entity
-public class addGrantRenewal  {
+public class addGrantRenewal implements Serializable{
 
 
  @Id
@@ -40,6 +41,12 @@ public class addGrantRenewal  {
     private String EducationalQualification;
     private String IdentificationMark;
     private String BloodGroupwithRHfactor;
+ 
+    private String decidedprmamt;
+    private String advpremamt;
+    private String balaamt;
+    private String refrencename;
+    
     private String Iholdaneffectivedrivinglicencetodrive;
     private String Particulars;
     private String Particularsof;
@@ -431,6 +438,62 @@ public class addGrantRenewal  {
      */
     public void setGrantrenewalid(int grantrenewalid) {
         this.grantrenewalid = grantrenewalid;
+    }
+
+    /**
+     * @return the decidedprmamt
+     */
+    public String getDecidedprmamt() {
+        return decidedprmamt;
+    }
+
+    /**
+     * @param decidedprmamt the decidedprmamt to set
+     */
+    public void setDecidedprmamt(String decidedprmamt) {
+        this.decidedprmamt = decidedprmamt;
+    }
+
+    /**
+     * @return the advpremamt
+     */
+    public String getAdvpremamt() {
+        return advpremamt;
+    }
+
+    /**
+     * @param advpremamt the advpremamt to set
+     */
+    public void setAdvpremamt(String advpremamt) {
+        this.advpremamt = advpremamt;
+    }
+
+    /**
+     * @return the balaamt
+     */
+    public String getBalaamt() {
+        return balaamt;
+    }
+
+    /**
+     * @param balaamt the balaamt to set
+     */
+    public void setBalaamt(String balaamt) {
+        this.balaamt = balaamt;
+    }
+
+    /**
+     * @return the refrencename
+     */
+    public String getRefrencename() {
+        return refrencename;
+    }
+
+    /**
+     * @param refrencename the refrencename to set
+     */
+    public void setRefrencename(String refrencename) {
+        this.refrencename = refrencename;
     }
 
 }

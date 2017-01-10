@@ -15,6 +15,9 @@
         <property name="adCServices"><ref bean="aadharCardServices"/> </property>
          <property name="lServices"><ref bean="licServices"/> </property>
           <property name="salItServices"><ref bean="salaryItServices"/> </property>
+           <property name="grServices"><ref bean="addGrantRenewalServices"/> </property>
+            <property name="othServices"><ref bean="otherworkServices"/></property>
+
          
     </bean>
     
@@ -22,7 +25,7 @@
     <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
         <property name="mappings">
             <props>
-                <prop key="aadharCard.htm">aadharController</prop>
+                <prop key="grantrenewal.htm">aadharController</prop>
                  <prop key="login.htm">authenticateController</prop>
             </props>
         </property>
@@ -38,6 +41,6 @@
     -->
     <bean name="authenticateController"
           class="org.springframework.web.servlet.mvc.ParameterizableViewController"
-          p:viewName="lic" />
+          p:viewName="grantrenewal" />
 
 </beans>

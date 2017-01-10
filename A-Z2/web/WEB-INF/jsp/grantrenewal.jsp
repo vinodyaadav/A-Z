@@ -16,8 +16,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="">
-        
-       
+
+
 
         <title>Grant Renewal of Learner's Licence </title>
 
@@ -34,7 +34,7 @@
         <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <script language="javascript" src="js/client.js"></script>
         <script language="javascript" src="js/server.js"></script>
-       
+
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -206,6 +206,30 @@
                                             Educational Qualification :&nbsp&nbsp<input class="form-control" id="EducationalQualification" style="width:700px;" ><br>
                                             Identification Mark[s] :&nbsp&nbsp<input class="form-control" id="IdentificationMark" style="width:700px;" ><br>
                                             Blood Group with RH factor :&nbsp&nbsp<input class="form-control" id="BloodGroupwithRHfactor" style="width:700px;" ><br>
+
+                                            <br>
+                                            <table border="0" style="width:90%;">
+                                                <tr>
+                                                    <td>Decided Prem Amt:</td>
+                                                    <td>  &nbsp </td>
+                                                    <td ><input class="form-control" id="decidedprmamt"></td>					 
+                                                    <td>  &nbsp&nbsp </td>
+                                                    <td>Adv prem Amt:</td>
+                                                    <td>  &nbsp </td>
+                                                    <td><input class="form-control" id="advpremamt"></td>
+                                                    <td>  &nbsp&nbsp </td>
+                                                    <td>Bal Amt:</td>
+                                                    <td>  &nbsp </td>
+                                                    <td><input class="form-control" id="balaamt"></td>
+                                                    <td>  &nbsp&nbsp </td>
+                                                    <td>Refrence Name:</td>
+                                                    <td>  &nbsp </td>
+                                                    <td><input class="form-control" id="refrencename"></td>
+
+                                                </tr>
+                                            </table>
+                                            <br>
+
                                             I hold an effective driving licence to drive<br> [g] Motor Cycle/Light Vehicle/Medium Passenger Motor Vehicle/Medium Goods Vehicle with effect from : 
                                             &nbsp&nbsp<input class="form-control" id="Iholdaneffectivedrivinglicencetodrive" style="width:700px;" ><br>
                                             Particulars of any licence previously held by applicant whether it was cancelled and if so for what reason? 

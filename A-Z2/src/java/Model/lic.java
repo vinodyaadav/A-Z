@@ -72,60 +72,6 @@ private String issnf;
     private String bpass;
     private String irano;
 
-//    public lic(String snf, String mn, String fn, String imhn, String dob, String flad, String st, String pt, String vm, String none, String ht, String wt, String idm, String jod, String ban, String bran, String ifsc, String bankacc, String opno, String opno2, String ocmpnm, String qyfmm, String frae, String mrae, String brae, String srae, String hwae, String cdae, String dpat, String apat, String blat, String rene, String brcr, String sclvc, String thbc, String gc, String ahecy, String frif, String sysp, String adcd, String pacr, String drliva, String vgid, String pssprt, String cdid, String rncd, String ltbl, String arca, String voigid, String passp, String bpass, String irano) {
-//        this.snf = snf;
-//        this.mn = mn;
-//        this.fn = fn;
-//        this.imhn = imhn;
-//        this.dob = dob;
-//        this.flad = flad;
-//        this.st = st;
-//        this.pt = pt;
-//        this.vm = vm;
-//        this.none = none;
-//        this.ht = ht;
-//        this.wt = wt;
-//        this.idm = idm;
-//        this.jod = jod;
-//        this.ban = ban;
-//        this.bran = bran;
-//        this.ifsc = ifsc;
-//        this.bankacc = bankacc;
-//        this.opno = opno;
-//        this.opno2 = opno2;
-//        this.ocmpnm = ocmpnm;
-//        this.qyfmm = qyfmm;
-//        this.frae = frae;
-//        this.mrae = mrae;
-//        this.brae = brae;
-//        this.srae = srae;
-//        this.hwae = hwae;
-//        this.cdae = cdae;
-//        this.dpat = dpat;
-//        this.apat = apat;
-//        this.blat = blat;
-//        this.rene = rene;
-//        this.brcr = brcr;
-//        this.sclvc = sclvc;
-//        this.thbc = thbc;
-//        this.gc = gc;
-//        this.ahecy = ahecy;
-//        this.frif = frif;
-//        this.sysp = sysp;
-//        this.adcd = adcd;
-//        this.pacr = pacr;
-//        this.drliva = drliva;
-//        this.vgid = vgid;
-//        this.pssprt = pssprt;
-//        this.cdid = cdid;
-//        this.rncd = rncd;
-//        this.ltbl = ltbl;
-//        this.arca = arca;
-//        this.voigid = voigid;
-//        this.passp = passp;
-//        this.bpass = bpass;
-//        this.irano = irano;
-//    }
 
     /**
      * @return the snf
