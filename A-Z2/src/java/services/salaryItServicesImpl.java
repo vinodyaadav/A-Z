@@ -12,25 +12,25 @@ import dao.salaryItDao;
 
 public class salaryItServicesImpl implements salaryItServices {
 
-    salaryItDao SalaryItDao;
+    salaryItDao salaryItDao;
 
     public void setSalaryItDao(salaryItDao SalaryItDao) {
-        this.SalaryItDao = SalaryItDao;
+        this.salaryItDao = SalaryItDao;
     }
 
     public salaryItDao getSalaryItDao() {
-        return SalaryItDao;
+        return salaryItDao;
     }
     
     
     @Override
     public int addsalaryIt(salaryIt salaryIt) {
-        return SalaryItDao.addsalaryIt(salaryIt);
+        return salaryItDao.addsalaryIt(salaryIt);
     }
 
     @Override
     public int updatesalaryIt(salaryIt salaryIt) {
-        return SalaryItDao.updatesalaryIt(salaryIt);
+        return salaryItDao.updatesalaryIt(salaryIt);
     }
 
     /*public List viewsalaryIt(String loggedInUser) {

@@ -793,8 +793,8 @@ function addAdharCard()
     var selfName = document.getElementById("selfName").value;
   //  alert(selfName);
 
-    var mobNo = document.getElementById("mobNo").value;
- //   alert(mobNo);
+    var contactNoNo = document.getElementById("contactNoNo").value;
+ //   alert(contactNoNo);
 
     var fatherName = document.getElementById("fatherName").value;
   //  alert(fatherName);
@@ -1038,6 +1038,353 @@ function addAdharCard()
         rentAgreement = "No";
     }
 
-    addAdharCardDetails(oldAadharNo, selfName, mobNo, fatherName, husbandName, dob, address, changesNote, changesNote1, changesNote2, decidedAmtRs, advamt, balamt, referanceName, birthCert, boardcert10, boardcert12, graduateCopy, higheredu, schoolcert, pancard, passport, drivingLicence, votingId, RestLetter, govtbankpass, licpolicy, renetedAgree,
+    addAdharCardDetails(oldAadharNo, selfName, contactNoNo, fatherName, husbandName, dob, address, changesNote, changesNote1, changesNote2, decidedAmtRs, advamt, balamt, referanceName, birthCert, boardcert10, boardcert12, graduateCopy, higheredu, schoolcert, pancard, passport, drivingLicence, votingId, RestLetter, govtbankpass, licpolicy, renetedAgree,
             rationcard, Votingid, Passportadd, Drivinglic, PassbookBank, lightbill, bankStat, rentAgreement);
+}
+
+
+
+/* 
+ * To change this license header+ choose License Headers in Project Properties.
+ * To change this template file+ choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+
+function addPassport2Details()
+{
+
+
+    var docType=document.getElementById("docType").selected;
+   // alert(docType);
+    var optionsRadios1 = document.getElementById("optionsRadios1").selected;
+    var optionsRadios2 = document.getElementById("optionsRadios2").selected;
+    var custsrnm = document.getElementById("custsrnm").value;
+    //alert(custsrnm);
+    var custfsnm = document.getElementById("custfsnm").value;
+    //alert(custfsnm);
+    var custpsnm = document.getElementById("custpsnm").value;
+    //alert(custpsnm);
+    var dob = document.getElementById("dob").value;
+    // alert(dob);
+    var optionsRadios3 = document.getElementById("optionsRadios3").selected;
+    var optionsRadios4 = document.getElementById("optionsRadios4").selected;
+    var pob = document.getElementById("pob").value;
+    //alert(pob);
+    var tal = document.getElementById("tal").value;
+    //alert(tal);
+    var dist = document.getElementById("dist").value;
+    //alert(dist);
+    var ste = document.getElementById("ste").value;
+    //alert(ste);
+    var quali = document.getElementById("quali").value;
+    //alert(quali);
+    var optionsRadios5 = document.getElementById("optionsRadios5").selected;
+    var optionsRadios6 = document.getElementById("optionsRadios6").selected;
+    var optionsRadios7 = document.getElementById("optionsRadios7").selected;
+    var optionsRadios8 = document.getElementById("optionsRadios8").selected;
+    var optionsRadios9 = document.getElementById("optionsRadios9").selected;
+    var optionsRadios10 = document.getElementById("optionsRadios10").selected;
+    var optionsRadios11 = document.getElementById("optionsRadios11").selected;
+    var vblmrk = document.getElementById("vblmrk").value;
+    //alert(vblmrk);
+    var address = document.getElementById("address").value;
+    //alert(address);
+    var contactNo = document.getElementById("contactNo").value;
+    //alert(contactNo);
+    
+    var email = document.getElementById("email").value;
+    //alert(email);
+    var nmofp = document.getElementById("nmofp").value;
+    //alert(nmofp);
+    var dors = document.getElementById("dors").value;
+    //alert(dors);
+    var phno = document.getElementById("phno").value;
+    //alert(phno);
+    var whnm = document.getElementById("whnm").value;
+    //alert(whnm);
+    var fnm = document.getElementById("fnm").value;
+    //alert(fnm);
+    var mnm = document.getElementById("mnm").value;
+    //alert(mnm);
+    var pvadd = document.getElementById("pvadd").value;
+    //alert(pvadd);
+    var pin = document.getElementById("pin").value;
+    //alert(pin);
+    var doi = document.getElementById("doi").value;
+    //alert(doi);
+    var fno = document.getElementById("fno").value;
+    //alert(fno);
+    var poi = document.getElementById("poi").value;
+    //alert(poi);
+    var doe = document.getElementById("doe").value;
+    //alert(doe);
+    var flnm1 = document.getElementById("flnm1").value;
+    //alert(flnm1);
+    var add1 = document.getElementById("add1").value;
+    //alert(add1);
+    var mob1 = document.getElementById("mob1").value;
+    //alert(mob1);
+    var flnm2 = document.getElementById("flnm2").value;
+    //alert(flnm2);
+    var add2 = document.getElementById("add2").value;
+    //alert(add2);
+    var mob2 = document.getElementById("mob2").value;
+    //alert(mob2);
+    var optionsRadios12 = document.getElementById("optionsRadios12").selected;
+    var optionsRadios13 = document.getElementById("optionsRadios13").selected;
+    var damt = document.getElementById("damt").value;
+    //alert(damt);
+    var date1 = document.getElementById("date1").value;
+    //alert(date1);
+    var aamt = document.getElementById("aamt").value;
+    //alert(aamt);
+    var date2 = document.getElementById("date2").value;
+    //alert(date2);
+    var bamt = document.getElementById("bamt").value;
+    //alert(bamt);
+    var date3 = document.getElementById("date3").value;
+    //alert(date3);
+    var amountPaid=document.getElementById("amountPaid").selected;
+    //alert(amountPaid);
+    var date4=document.getElementById("date4").selected;
+    //alert(date4);
+    var submitDate=document.getElementById("submitDate").selected;
+    //alert("textend"+submitDate);
+
+
+
+    var isbirthCert = document.getElementById("birthCert").checked;
+    var birthCert = "";
+    if (isbirthCert)
+    {
+        birthCert = "Yes";
+
+    } else {
+        birthCert = "No";
+
+    }
+    //alert(birthCert);                                                                                                                     
+    var isschoolCert = document.getElementById("schoolCert").checked;
+    var schoolCert = "";
+    if (isschoolCert)
+    {
+        schoolCert = "Yes";
+
+    } else
+    {
+        schoolCert = "No";
+
+    }
+    //alert(schoolCert);   
+
+    var isssc = document.getElementById("ssc").checked;
+    var ssc = "";
+    if (isssc)
+    {
+        ssc = "Yes";
+
+    } else {
+        ssc = "No";
+
+    }
+    //alert(ssc);   
+    var ishsc = document.getElementById("hsc").checked;
+    var hsc = "";
+    if (ishsc)
+    {
+        hsc = "Yes";
+
+    } else {
+        hsc = "No";
+
+    }
+    //alert(hsc);   
+    var isahem = document.getElementById("ahem").checked;
+    var ahem = "";
+    if (isahem)
+    {
+        ahem = "Yes";
+
+    } else {
+        ahem = "No";
+
+    }
+    //alert(ahem);   
+
+    var isgc = document.getElementById("gc").checked;
+    var gc = "";
+    if (isgc)
+    {
+        gc = "Yes";
+
+    } else {
+        gc = "No";
+
+    }
+    //alert(gc);   
+    var ispc = document.getElementById("pc").checked;
+    var pc = "";
+    if (ispc)
+    {
+        pc = "Yes";
+
+    } else {
+        pc = "No";
+
+    }
+    //alert(pc);   
+    var isvc = document.getElementById("vc").checked;
+    var vc = "";
+    if (isvc)
+    {
+        vc = "Yes";
+
+    } else {
+        vc = "No";
+
+    }
+    //alert(vc);    
+    var isdl = document.getElementById("dl").checked;
+    var dl = "";
+    if (isdl)
+    {
+        dl = "Yes";
+
+    } else {
+        dl = "No";
+
+    }
+    //alert(dl);    
+    var isci = document.getElementById("ci").checked;
+    var ci = "";
+    if (isci)
+    {
+        ci = "Yes";
+
+    } else {
+        ci = "No";
+
+    }
+    //alert(ci);   
+    var isrc = document.getElementById("rc").checked;
+    var rc = "";
+    if (isrc)
+    {
+        rc = "Yes";
+
+    } else {
+        rc = "No";
+
+    }
+    //alert(rc);    
+    var islbo = document.getElementById("lbo").checked;
+    var lbo = "";
+    if (islbo)
+    {
+        lbo = "Yes";
+
+    } else {
+        lbo = "No";
+
+    }
+    //alert(lbo);    
+
+    var issl = document.getElementById("sl").checked;
+    var sl = "";
+    if (issl)
+    {
+        sl = "Yes";
+
+    } else {
+        sl = "No";
+
+    }
+    //alert(sl);   
+    var isgbs = document.getElementById("gbs").checked;
+    var gbs = "";
+    if (isgbs)
+    {
+        gbs = "Yes";
+
+    } else {
+        gbs = "No";
+
+    }
+    //alert(gbs);   
+    var isac = document.getElementById("ac").checked;
+    var ac = "";
+    if (isac)
+    {
+        ac = "Yes";
+
+    } else {
+        ac = "No";
+
+    }
+    //alert(ac);   
+    var isvi = document.getElementById("vi").checked;
+    var vi = "";
+    if (isvi)
+    {
+        vi = "Yes";
+
+    } else {
+        vi = "No";
+
+    }
+    //alert(vi);   
+    var iscl = document.getElementById("cl").checked;
+    var cl = "";
+    if (iscl)
+    {
+        cl = "Yes";
+
+    } else {
+        cl = "No";
+
+    }
+    //alert(cl);   
+    var isgb = document.getElementById("gb").checked;
+    var gb = "";
+    if (isgb)
+    {
+        gb = "Yes";
+
+    } else {
+        gb = "No";
+
+    }
+    //alert(gb);   
+    var islp = document.getElementById("lp").checked;
+    var lp = "";
+    if (islp)
+    {
+        lp = "Yes";
+
+    } else {
+        lp = "No";
+
+    }
+    //alert(lp);   
+    var isiran = document.getElementById("iran").checked;
+    var iran = "";
+    if (isiran)
+    {
+        iran = "Yes";
+
+    } else {
+        iran = "No";
+
+    }
+    // alert("37"+iran);   
+
+    getPassport2Details(docType, optionsRadios1, optionsRadios2, custsrnm, custfsnm, custpsnm, dob, optionsRadios3, optionsRadios4, pob, tal, dist, ste,
+            quali, optionsRadios5, optionsRadios6, optionsRadios7, optionsRadios8, optionsRadios9, optionsRadios10,
+            optionsRadios11, vblmrk, address, contactNo, email, nmofp, dors, phno, whnm, fnm, mnm, pvadd, pin, doi, fno, poi, doe, flnm1,
+            add1, mob1, flnm2, add2, mob2, optionsRadios12, optionsRadios13, damt, date1, aamt, date2, bamt, date3,amountPaid, date4,submitDate,  birthCert, schoolCert, ssc, hsc, ahem,
+            gc, pc, vc, dl, ci, rc, lbo, sl, gbs, ac, vi, cl, gb, lp, iran);
+
+
+
 }

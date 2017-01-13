@@ -1,101 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
 
-    <head>
 
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="">
-
-        <title>SB Admin - Bootstrap Admin Template</title>
-
-        <!-- Bootstrap Core CSS -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-
-        <!-- Custom CSS -->
-        <link href="css/sb-admin.css" rel="stylesheet">
-
-        <!-- Morris Charts CSS -->
-        <link href="css/plugins/morris.css" rel="stylesheet">
-
-        <!-- Custom Fonts -->
-        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        
-        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <script language="javascript" src="js/client.js"></script>
-        <script language="javascript" src="js/server.js"></script>
-
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
-    </head>
-
-    <body>
-
-        <div id="wrapper">
-
-            <!-- Navigation -->
-            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html">Mservices</a>
-                </div>
-                <!-- Top Menu Items -->
-                <ul class="nav navbar-right top-nav">
-
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>Vinod <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-                <div class="collapse navbar-collapse navbar-ex1-collapse">
-                    <ul class="nav navbar-nav side-nav">
-                        <li>
-                            <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
-                            <ul id="demo" class="collapse">
-                                <li>
-                                    <a href="form1.html">PASSPORT</a>
-                                </li>
-                                <li>
-                                    <a href="form2.html">2/W + 4/W INSURANCE</a>
-                                </li>
-                                <li>
-                                    <a href="form3.html">PAN CARD</a>
-                                </li>
-                                <li>
-                                    <a href="Gumasta.html">Gumasta Licence</a>
-                                </li>
-                                <li>
-                                    <a href="form5.html">Learner/Driving Licence</a>
-                                </li>
-                            </ul>
-                        </li>
-
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-            </nav>
-
-            <div id="page-wrapper">
-
-                <div class="container-fluid">
+                <div class="container-fluid" id="containerfluid">
 
                     <!-- Page Heading -->
                     <br>
@@ -115,15 +20,22 @@
                                 <table border="0" style="width:100%;">
                                     <tr><td >FORM OR POLICY TYPE:-</td>
                                         <td ><input class="form-control" value="SELFPOLICY/CHILDREN PLAN/FAMILY PLAN">
-                                            <br>
-                                    <tr>
-                                        <td >Self Name Full:</td>
-
-                                        <td ><input class="form-control" id="snf" style="width:90%;"></td>					 
                                         <td>  &nbsp&nbsp </td>
-                                        <td >Mob No:</td>
-                                        <td>  &nbsp </td>
-                                        <td><input class="form-control" id="mn" style="width:90%;"></td>
+                                        <td >Document Type:</td>
+                                        <td ><input class="form-control" id="docType" style="width:90%;"></td>
+                                        <td>  &nbsp&nbsp </td>
+                                        <td >Submission Date:</td>
+                                        <td ><input class="form-control" id="submitDate" style="width:90%;"></td>
+                                        <td>  &nbsp </td></tr>
+                                    <br>
+                                    <tr>
+
+                                        <td >Customer Name:</td>
+
+                                        <td ><input class="form-control" id="custName" style="width:90%;"></td>					 
+                                        <td>  &nbsp&nbsp </td>
+                                        <td >Contact No.:</td>
+                                        <td><input class="form-control" id="contactNo" style="width:90%;"></td>
                                         <td>  &nbsp&nbsp </td>
                                         <td >Father Name :</td>
                                         <td>  &nbsp </td>
@@ -143,8 +55,8 @@
                             <br>
                             <table style="width:100%;">
                                 <tr>
-                                    <td >Full Address  :</td>
-                                    <td ><input class="form-control" id="flad" style="width:80%;"></td>
+                                    <td > Address  :</td>
+                                    <td ><input class="form-control" id="address" style="width:80%;"></td>
                                     <td >State:</td>
                                     <td ><input class="form-control" id="st" style="width:80%;"></td>
                                 </tr>
@@ -171,7 +83,7 @@
 
                                     <td style="padding-left:15px;width:25%;">
                                         <div class="form-group">
-                                        <textarea class="form-control" id="none" rows="2" ></textarea>
+                                            <textarea class="form-control" id="none" rows="2" ></textarea>
                                         </div></td>					 
                                     <td >  &nbsp&nbsp </td>
                                     <td >Height:</td>
@@ -272,15 +184,15 @@
                         <tr>
                             <td>Decided Prem Amt:</td>
                             <td>  &nbsp </td>
-                            <td ><input class="form-control" id="dpat"></td>					 
+                            <td ><input class="form-control" id="decidedAmt"></td>					 
                             <td>  &nbsp&nbsp </td>
                             <td>Adv prem Amt:</td>
                             <td>  &nbsp </td>
-                            <td><input class="form-control" id="apat"></td>
+                            <td><input class="form-control" id="amtPaid"></td>
                             <td>  &nbsp&nbsp </td>
                             <td>Bal Amt:</td>
                             <td>  &nbsp </td>
-                            <td><input class="form-control" id="blat"></td>
+                            <td><input class="form-control" id="balAmt"></td>
                             <td>  &nbsp&nbsp </td>
                             <td>Refrence Name:</td>
                             <td>  &nbsp </td>
@@ -378,7 +290,7 @@
                             <tr>
                                 <td >
                                     <div>
-                                        <button type="submit" class="btn btn-primary" onclick="addlicdetails()">Submit</button>
+                                        <button type="button" class="btn btn-primary" onclick="addlicdetails()">Submit</button>
                                     </div>
                                 </td>
                             </tr>

@@ -17,11 +17,16 @@
     <bean id="aadharDao" class="dao.aadharCardDaoImpl">
             <property name="sessionFactory"> <ref bean="sessionFactory"/> </property>
     </bean>
-
-         <bean id="salaryItDao" class="dao.salaryItDaoImpl">
+    
+     <bean id="salaryItDao" class="dao.salaryItDaoImpl">
             <property name="sessionFactory"> <ref bean="sessionFactory"/> </property>
     </bean>
-         
+    
+    <bean id="passport2Dao" class="dao.passport2DaoImpl">
+  <property name="sessionFactory"> <ref bean="sessionFactory"/> </property>
+    </bean>            
+    
+    
          
     <bean id="licDao" class="dao.licDaoImpl">
             <property name="sessionFactory"> <ref bean="sessionFactory"/> </property>

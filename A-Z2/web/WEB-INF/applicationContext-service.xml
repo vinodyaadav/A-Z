@@ -12,6 +12,10 @@
         <bean id="aadharCardServices" class="services.aadharCardServicesImpl" >
                 <property name="aadharDao"><ref bean="aadharDao" /></property>
         </bean>
+        
+        <bean id="passport2Services" class="services.passport2ServicesImpl" >
+                <property name="passport"><ref bean="passport2Dao" /></property>
+        </bean>
 
         
          <bean id="licServices" class="services.licServicesImpl" >

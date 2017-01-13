@@ -1,101 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-        <script language="javascript" src="js/client.js"></script>
-        <script language="javascript" src="js/server.js"></script>
-    <title>SB Admin - Bootstrap Admin Template</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/sb-admin.css" rel="stylesheet">
-
-    <!-- Morris Charts CSS -->
-    <link href="css/plugins/morris.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-<body>
-
-    <div id="wrapper">
-
-        <!-- Navigation -->
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">Mservices</a>
-            </div>
-            <!-- Top Menu Items -->
-            <ul class="nav navbar-right top-nav">
-                             
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>Vinod <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav side-nav">
-                  <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Services <i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="demo" class="collapse">
-                           <li>
-                                <a href="Passport.html">PASSPORT</a>
-                            </li>
-                            <li>
-                                <a href="2-4-w_insurence.html">2/W + 4/W INSURANCE</a>
-                            </li>
-							 <li>
-                                <a href="Pan Card.html">PAN CARD</a>
-                            </li>
-							 <li>
-                                <a href="gumasta.html">GUMASTA LICENCE</a>
-                            </li>
-							 <li>
-                                <a href="LearnerDriving Licence.html">LEARNER/DRIVING LICENCE</a>
-                            </li>
-							<li>
-                                <a href="Grant Renewal of Learner's Licence.html">GRANT RENEWAL OF LEARNER LICENCE</a>
-                            </li>
-                        </ul>
-                    </li>
-                 
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </nav>
-
-        <div id="page-wrapper">
-
-            <div class="container-fluid">
+            <div class="container-fluid" id="containerfluid">
 
                 <!-- Page Heading -->
 				<br>
@@ -114,7 +19,7 @@
                         <form role="form">
 
                             <div class="form-group" >
-							 <table border="0" style="width:70%;">
+							 <table border="0" style="width:90%;">
 					  <tr>
 					 <td >FOrm Type :</td>
                                     <td >
@@ -123,7 +28,11 @@
                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Old Form
 								                                     
                                     </td>					 
-					 <td>  &nbsp&nbsp </td>
+					 <td>  &nbsp </td>
+                                         <td >Document Type:</td>
+					  <td>  &nbsp </td>
+					  <td><input class="form-control" id="docType"></td>
+                                          <td>  &nbsp </td>
 					  <td >Correction Form :</td>
 					  <td>  &nbsp </td>
 					  <td><input class="form-control" id="CorrectionForm"></td>
@@ -145,9 +54,9 @@
 					  <br>
                       <table border="0" style="width:90%;">
 					  <tr>
-					  <td >First Name:</td>
+					  <td >CustName:</td>
 					 <td>  &nbsp </td>
-					  <td ><input class="form-control"id="firstName"></td>					 
+					  <td ><input class="form-control"id="custName"></td>					 
 					 <td>  &nbsp&nbsp </td>
 					  <td >Father Name :</td>
 					  <td>  &nbsp </td>
@@ -178,9 +87,9 @@
 					  <tr>
 					  <td>Full Address :</td>
 					  
-					  <td style="padding-left:5px;width:35%;>
+					  <td style="padding-left:5px;width:35%;">
 					  <div class="form-group">
-                          <textarea class="form-control" rows="2" id="FullAdress" ></textarea>
+                          <textarea class="form-control" rows="2" id="address" ></textarea>
                             </div></td>					 
 					 <td >  &nbsp&nbsp </td>
 					  <td >Contact no:</td>
@@ -267,73 +176,33 @@
 								
 								<br>
 								
-								<table align="left" border="1" style="width:70%;">
-								<tr align="center">
-								<td>
-								<b>Account</b>
-								</td>
-								<td>
-								<b>Amt Rs.</b>
-								</td>
-								<td>
-								<b>Date Of Submit</b>
-								</td>
-								</tr>
-								<tr align="center">
-								<td>
-								Decided Amt-Rs.
-								</td>
-								<td>
-								<input class="form-control" id="DecidedAmtRs1">
-								</td>
-								<td>
-								<input class="form-control" id="DecidedAmtRs2">
-								</td>
-								</tr><tr align="center">
-								<td>
-								Credit Amt-Rs.
-								</td>
-								<td>
-								<input class="form-control" id="CreditAmtRs1">
-								</td>
-								<td>
-								<input class="form-control" id="CreditAmtRs2">
-								</td>
-								</tr><tr align="center">
-								<td>
-							    Balance Amt-Rs.
-								</td>
-								<td>
-								<input class="form-control" id="BalanceAmtRs1">
-								</td>
-								<td>
-								<input class="form-control" id="BalanceAmtRs2">
-								</td>
-								</tr>
-								<tr align="center">
-								<td>
-								Remark Note
-								</td>
-								<td>
-								<input class="form-control" id="RemarkNote1">
-								</td>
-								<td>
-								<input class="form-control" id="RemarkNote2">
-								</td>
-								</tr>
-								</table>
+								   <table border="1" style="width:70%;">
+                                    <tr >
+                                        <th ><center>DECIDED AMT</center></th>
+                                    <th ><center>AMOUNT PAID</center></th>
+                                    <th ><center>BALANCE AMT</center></th>
+                                    <th ><center>REMARK NOTE</center></th>
+                                    <th ><center>SUBMIT DATE</center></th>
+                                    </tr>
+                                    <tr>
+                                        <td><input class="form-control" id="decidedAmt"></td>
+                                        <td><input class="form-control" id="amtPaid"></td>
+                                        <td><input class="form-control" id="balAmt"></td>
+                                        <td><input class="form-control" id="Remarknote"></td>
+                                         <td><input class="form-control"id="submitDate"></td>
+                                    <tr>
+                                </table>
 								<br><br><br>
-								<br><br><br><br><br><br><br>
+								<br><br><br><br>
 								
 								
-								<br>
-								<br>
-								<br>
+							
+								
 							<table align="center">
 							<tr>
 							<td >
 							<div>
-							<button type="submit" class="btn btn-primary" onclick="getPancardDetail()">Submit</button>
+							<button type="button" class="btn btn-primary" onclick="getPancardDetail()">Submit</button>
 							</div>
                               </td>
 							  </tr>
